@@ -66,7 +66,7 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo `LICENSE` para 
 
 ## Contato
 
-Marcos Boni - [seu-email@exemplo.com](mailto:seu-email@exemplo.com)
+Marcos Boni - 
 
 Link do Projeto: [https://github.com/seu-usuario/sistema-gerenciamento-veiculos](https://github.com/seu-usuario/sistema-gerenciamento-veiculos)
 
