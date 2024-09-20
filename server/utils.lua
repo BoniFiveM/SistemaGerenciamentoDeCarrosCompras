@@ -1,0 +1,2 @@
+-- Funções utilitárias (opcional)
+-- Você pode adicionar funções que serão usadas em diferentes scripts
