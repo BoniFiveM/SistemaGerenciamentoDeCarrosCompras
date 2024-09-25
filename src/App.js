@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import VehicleList from './VehicleList';
 import VehicleDetail from './VehicleDetail';
 import TransactionHistory from './TransactionHistory';
-import Footer from './Footer'; // Adicione esta linha
+import Footer from './Footer'; 
 import { vehicles as vehicleData } from './vehicleData';
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
     const [transactions, setTransactions] = useState([]);
     const [filter, setFilter] = useState('');
     const [sortBy, setSortBy] = useState('name');
-    const [notification, setNotification] = useState(null); // Adicione esta linha
+    const [notification, setNotification] = useState(null); 
 
     const filteredVehicles = vehicles.filter(vehicle => 
         vehicle.name.toLowerCase().includes(filter.toLowerCase())
@@ -28,15 +28,15 @@ const App = () => {
         const transaction = {
             date: new Date().toLocaleString(),
             vehicle: vehicle,
-            price: vehicle.price // Use o preço do veículo
+            price: vehicle.price 
         };
         setTransactions([...transactions, transaction]);
 
-        // Remove o veículo da lista após a compra
+        
         const updatedVehicles = vehicles.filter(v => v.id !== vehicle.id);
         setVehicles(updatedVehicles);
 
-        setSelectedVehicle(null); // Fecha o detalhe do veículo
+        setSelectedVehicle(null); 
 
         setNotification(`Veículo ${vehicle.name} comprado com sucesso!`);
         setTimeout(() => setNotification(null), 3000);
