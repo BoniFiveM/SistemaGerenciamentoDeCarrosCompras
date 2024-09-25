@@ -12,14 +12,14 @@ AddEventHandler('purchaseVehicle', function(data)
     local vehicleId = data.vehicleId
     local color = data.color
 
-    -- Lógica de economia (verifique se o jogador tem dinheiro suficiente)
-    local playerMoney = getPlayerMoney(player)  -- Defina essa função conforme necessário
+
+    local playerMoney = getPlayerMoney(player)  
 
     for _, vehicle in ipairs(vehicles) do
         if vehicle.id == vehicleId then
             if playerMoney >= vehicle.price then
-                deductPlayerMoney(player, vehicle.price)  -- Defina essa função conforme necessário
-                addVehicleToPlayerInventory(player, vehicleId, color)  -- Defina essa função conforme necessário
+                deductPlayerMoney(player, vehicle.price)  
+                addVehicleToPlayerInventory(player, vehicleId, color)  
                 TriggerClientEvent('notification', player, "Compra realizada com sucesso!")
             else
                 TriggerClientEvent('notification', player, "Dinheiro insuficiente.")
@@ -30,14 +30,14 @@ AddEventHandler('purchaseVehicle', function(data)
 end)
 
 function getPlayerMoney(player)
-    -- Retorne a quantidade de dinheiro do jogador
-    return 100000 -- Exemplo: retorne um valor fixo
+  
+    return 100000 
 end
 
 function deductPlayerMoney(player, amount)
-    -- Deduzir dinheiro do jogador
+ 
 end
 
 function addVehicleToPlayerInventory(player, vehicleId, color)
-    -- Adicionar o veículo ao inventário do jogador
+
 end
